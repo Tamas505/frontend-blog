@@ -1,0 +1,144 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    background-color: #f5f5f5;
+    height: 100vh;
+    
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(245, 222, 91);
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    text-shadow: 2px 2px orange;
+}
+
+h2{
+  font-size: 22px;
+}
+
+header{
+    padding: 10px
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(to bottom, #f8db7c, #ff9170);
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 18px;
+    box-shadow: 10px 20px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav a{
+    color: rgb(197, 8, 8);
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 7px 15px;
+    background: linear-gradient(to bottom, #ff9170, #f8db7c);
+    color: white; 
+    box-shadow: 10px 20px 30px 10px rgba(87, 35, 1, 0.4);
+  } 
+
+.nav a:hover{
+  background: linear-gradient(to bottom, #fc5f2f, #f8db7c);
+}
+
+.cikk a{
+  text-decoration: none;
+  color: white;
+
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1150px;
+  max-height: 850px;
+  margin: 0 auto;
+  padding: 20px 0;
+  
+}
+
+.cikk{
+  min-width: 250px;
+  max-height: 85%;
+  border-radius: 9px;
+  padding: 20px;
+  box-shadow: 10px 20px 30px 10px rgba(0, 0, 0, 0.5);
+  border-left: 7px solid #d47171; 
+  background: linear-gradient(to right, #faf8f5, #fcc292);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} 
+
+@media only screen and (max-width: 1080px){
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 100px;
+    }
+    footer{
+      position: static;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .grid-container{
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-bottom: 90px;
+    }
+        h1, .nav{
+          margin: 0 auto;
+          font-size: 18px;
+    }
+          a{
+            font-size: 14px;
+          }
+            footer{
+              display: none;
+            } 
+  }
+
+.btn{
+  border: none; 
+  border-radius: 7px;
+  padding: 7px 15px;
+  background-color: #d47171;
+  color: white; 
+  cursor: pointer;
+  margin: 0 auto;
+  align-self: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover{
+  background-color: #fc5f2f;
+  transform: scale(1.03);
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #7a7a7a;
+  color: #fff;
+  padding: 7px;
+  text-align: center;
+  z-index: 10;
+}
